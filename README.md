@@ -66,16 +66,16 @@ CardWalletSDK.start(builder: builder)
 /**
      Start the Funding for initial logic
      
-     - Important: Don't forget the implementation TokenProvider protocol for your valid access which is given by the Funding.
+     - Important: Don't forget the implementation CardWalletCredentialsProvider protocol for your valid access which is given by the Development Team.
      
      - Parameters:
-     - CardWalletSDKBuilder: Builder includes TokenProvider and Environment
+     - CardWalletSDKBuilder: Builder includes CardWalletCredentialsProvider and Environment
      
-    
+
      // Sample Implementation
-     let builder = CardWalletSDKBuilder().setEnvironment(environment: Environment.STAGING).setTokenProvider(provider: self)
+     let builder = CardWalletSDKBuilder().setEnvironment(environment: Environment.STAGING).setCredentialsProvider(provider: self)
      CardWalletSDK.start(builder: builder)
- 
+
      */
     @objc public static func start(builder : CardWalletSDKBuilder){
         if(instance == nil){
@@ -148,7 +148,7 @@ CardWalletSDK.start(builder: builder)
                                         verifiedAmount : String,
                                         success : @escaping (_ creditCard: CreditCard?) -> (),
                                         failure : @escaping (_ error: FSError?) -> ()) {
-        manager.verifyCreditCard(amount: verifiedAmount, fundingSourceUUID: creditCard.cardToken, success: success, failure: failure)
+        manager.verifyCreditCard(amount: verifiedAmount, cardToken: creditCard.cardToken, success: success, failure: failure)
     }
     
     @objc public func testLogin(username : String,pin : String,callback: @escaping (String) -> ()){
@@ -174,11 +174,11 @@ CardWalletSDK.start(builder: builder)
      - An error of type `FSError`
      
      */
-    @objc public func getFundingSources(success : @escaping (_ creditCards: [CreditCard]?) -> (),failure : @escaping (_ error: FSError?) -> ()) {
+    @objc public func getCreditCards(success : @escaping (_ creditCards: [CreditCard]?) -> (),failure : @escaping (_ error: FSError?) -> ()) {
         
-        manager.getFundingSources(success: { (fundingSources) in
+        manager.getFundingSources(success: { (CreditCards) in
             
-            let creditCards = fundingSources?.map({ (fundingSource) -> CreditCard in
+            let creditCards = CreditCards?.map({ (fundingSource) -> CreditCard in
                 
                 let modelController = CreditCardModelController(fundingSource: fundingSource)
                 return modelController.creditCard
@@ -205,7 +205,7 @@ CardWalletSDK.start(builder: builder)
      */
     @objc public func removeCard( cardId: String, success : @escaping () -> Void,failure : @escaping (_ error: FSError?) -> ()) {
         
-        manager.removeFundingSource(fundingSourceUUID: cardId, success: success, failure: failure)
+        manager.removeFundingSource(cardToken: cardId, success: success, failure: failure)
     }
 ```
 ## Models
