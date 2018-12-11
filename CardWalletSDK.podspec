@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'CardWalletSDK'
-    s.version           = '0.0.1'
+    s.version           = '0.0.2'
     s.summary           = 'Card Management SDK Provided by Beam UAE'
     s.homepage          = 'http://example.com/'
     s.dependency 'Moya/ReactiveSwift', '~> 12.0'
@@ -20,7 +20,6 @@ Pod::Spec.new do |s|
     s.source            = { :http => 'https://github.com/beammaf/cardwallet-sdk-ios/blob/CocoaPods/CardWalletSDK.zip?raw=true'}
 
     s.ios.deployment_target = '11.0'
-    s.ios.vendored_frameworks = 'CardWalletSDK.framework, ReactiveMoya.framework, RxMoya.framework'
-    s.framework = "Alamofire"
+    s.ios.vendored_frameworks = 'CardWalletSDK.framework', 'ReactiveMoya.framework', 'RxMoya.framework'
     s.requires_arc = true
 end
