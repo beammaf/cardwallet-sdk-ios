@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     s.license           = { :type => 'MIT', :file => 'LICENSE' }
 
     s.platform          = :ios
-    s.source            = { :git => 'https://github.com/beammaf/cardwallet-sdk-ios.git',:branch => 'CocoaPods', :tag => 'v0.0.5'}
+    s.source            = { :git => 'https://github.com/beammaf/cardwallet-sdk-ios.git',:branch => 'CocoaPods'}
 
     s.ios.deployment_target = '11.0'
     s.ios.vendored_frameworks = 'CardWalletSDK.framework', 'ReactiveMoya.framework', 'RxMoya.framework'
