@@ -313,7 +313,7 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 ///
 /// throws:
 /// <code>FSError</code>
-- (void)getFundingSourcesWithSuccess:(void (^ _Nonnull)(NSArray<CreditCard *> * _Nullable))success failure:(void (^ _Nonnull)(FSError * _Nullable))failure;
+- (void)getCreditCardsWithSuccess:(void (^ _Nonnull)(NSArray<CreditCard *> * _Nullable))success failure:(void (^ _Nonnull)(FSError * _Nullable))failure;
 /// Remove your creditCard for your card management
 /// <ul>
 ///   <li>
