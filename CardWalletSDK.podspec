@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
     s.name              = 'CardWalletSDK'
-    s.version           = '0.0.5'
+    s.version           = '0.0.6'
     s.summary           = 'Card Management SDK Provided by Beam UAE'
-    s.homepage          = 'http://example.com/'
+    s.homepage          = 'http://beamuae.app/'
     s.dependency 'Moya/ReactiveSwift', '~> 12.0'
     s.dependency 'Moya/RxSwift', '~> 12.0'
     s.dependency 'Stripe'
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     s.license           = { :type => 'MIT', :file => 'LICENSE' }
 
     s.platform          = :ios
-    s.source            = { :git => 'https://github.com/beammaf/cardwallet-sdk-ios.git', :tag => 'v0.0.5'}
+    s.source            = { :git => 'https://github.com/beammaf/cardwallet-sdk-ios.git',:branch => 'CocoaPods', :tag => 'v0.0.5'}
 
     s.ios.deployment_target = '11.0'
     s.ios.vendored_frameworks = 'CardWalletSDK.framework', 'ReactiveMoya.framework', 'RxMoya.framework'
