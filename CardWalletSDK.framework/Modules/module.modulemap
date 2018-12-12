@@ -1,0 +1,11 @@
+framework module CardWalletSDK {
+  umbrella header "CardWalletSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module CardWalletSDK.Swift {
+    header "CardWalletSDK-Swift.h"
+    requires objc
+}
