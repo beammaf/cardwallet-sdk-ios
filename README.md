@@ -44,6 +44,17 @@ let builder = CardWalletSDKBuilder().setEnvironment(environment: Environment.STA
 CardWalletSDK.start(builder: builder)
 ```
 
+## CredentialsProvider
+This protocol has one function called getCredentials(). This function should be implemented on the class which has capability of receive authentication token and partner id. This function has one parameter called didCredentialsReceived(CardWalletCredentials).  You can call this function after a async call to backend to get token information. Before every request to CardWallet Service. This function is going to call by SDK in order to get credentials for request.
+
+```swift
+func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
+         let crendentials CardWalletCredentials(token: "Bearer <<TOKEN>>", partnerId: "<<PARTNET_ID>>")
+         didCredentialsReceived(credentials)
+    }
+```
+
+
 ## CardWalletSDK Object
 
 * All sdk functions using CardWalletSDK object. It's a simple object to access functionalities of CardWalletSDK. You can call these functions via CardWalletSDK's singleton.
