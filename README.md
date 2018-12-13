@@ -1,19 +1,26 @@
 
 #  CardWallet SDK - IOS Guide
 
-The CardWallet SDK is for interacting with the funding platform to add, update or remove card for integrate Ticketless Parking System later. It provides functionality to manage funding sources.
+The CardWallet SDK is for interacting with the funding platform to add, update or remove card. It provides functionality to manage credit cards.
 
 In order to use SDK framework you must be a registered developer with a provisioned token.
 
 ## Requirements
 * SDK Supports min IOS 11 or newer Deployment Target.
-* TokenProvider Protocol must be implemented for Authentication Token: Provided by development team.
+* CardWalletCredentialsProvider Protocol must be implemented for Credentials: Provided by development team.
 
 ## Integration
+### CocoaPods
+In order to add framework via cocoapods you need to add this pod to podfile
+```
+pod 'CardWalletSDK'
+```
+This will download required dependencies to project.
+###  Manual
 
 To install the CardWallet SDK directly into your application, open your project and open the project navigator (**⌘ + 0**) > Tap on **Your Project** > Under **Targets**, click on the selected **Build Target** > Tap on the **General** tab, located at the top > Drag the CardWalletSDK.framework into the **Embedded Frameworks** section. The CardWalletSDK.framework should appear in both the Embedded Frameworks and Linked Libraries and Frameworks section.
 
-## Required Libraries
+### Required Libraries
 
 CardWalletSDK dependent a couple of another framework. Please make sure you have;
 
@@ -25,27 +32,6 @@ Alamofire.framework
 
 inside the Embedded Frameworks section
 
-#### CocoaPods
-
-If you are using CocoaPods enough to import Rx version to Moya library;
-
-```
-pod 'Moya/RxSwift', '~> 11.0'
-```
-
-and call your project path pod install, Don’t forget to use the workspace .xcworkspace file, not the project .xcodeproj file.
-
-#### Carthage
-Import Moya library is enough to add your Cartfile
-
-```
-github "Moya/Moya"
-```
-And call your project path;
-
-```
-carthage update --platform iOS --verbose
-```
 
 # SDK Overview
 
@@ -225,6 +211,35 @@ CardWalletSDK.start(builder: builder)
 }
 
 ```
+
+### CWError
+```swift
+ var errorCode : Int = -1
+ var errorDescription : String = ""
+ @objc public var cause : NSError
+```
+
+
+All functions related to this sdk returns CWError objects. This object has an errorCode.
+
+#### Error Codes
+```swift
+    @objc public static let Unknown = -1
+    @objc public static let Unauthorized = 1
+    @objc public static let JsonParseError = 2
+    @objc public static let InvalidExpirationMonth = 3
+    @objc public static let InvalidExpirationYear = 4
+    @objc public static let ExpiredCard = 5
+    @objc public static let SchemeNotSupported = 6
+    @objc public static let InvalidCardNumber = 7
+    @objc public static let InvalidFirstName = 8
+    @objc public static let InvalidLastName = 9
+    @objc public static let InvalidCVC = 10
+    @objc public static let ValidationAmountProcessingError = 11
+    @objc public static let IcorrectVerificationAmount = 12
+```
+
+
 ## UI Customization.
 CardWallet SDK supports custom UI for AddCreditCard functionality.
 
@@ -241,4 +256,4 @@ You can pass custom xib file with addCreditCard function. Xib file must have som
 |  UIButton            | Submit Button                     |100105 |
 
 ## Version
-* 1.0
+* 1.1
