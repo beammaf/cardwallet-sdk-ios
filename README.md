@@ -251,6 +251,8 @@ All functions related to this sdk returns CWError objects. This object has an er
 ```
 
 
+
+
 ## UI Customization.
 CardWallet SDK supports custom UI for AddCreditCard functionality.
 
@@ -266,5 +268,45 @@ You can pass custom xib file with addCreditCard function. Xib file must have som
 |  SecureTextField | Name Surname                   |100103 |
 |  UIButton            | Submit Button                     |100105 |
 
+### Card Validation On Fly.
+CardWallet SDK validates cards on fly at Add Card Page. This feature is optional. In order to use this feature, related error labels must be specified on custom add card xib file. 
+
+#### Views and Tags.
+|  View Type | Descriptionn              |Tag    |
+| ---------- | ------------------------- |------ |
+|  UILabel   | Card Number error label   |100201 |
+|  UILabel   | Expiry Date error Label   |100202 |
+|  UILabel   | CVC error label           |100203 |
+|  UILabel   | Name Surname error label  |100204 |
+
+
+#### Custom Live Validation Error Messages.
+```swift
+  @objc static var liveValidationErrorMap = [
+        CWSchemeNotSupported : "Card is not supported",
+        CWInvalidCardNumber : "Invalid card",
+        CWExpireCard : "Card expired",
+        CWInvalidExpiration : "Invalid card expiry" ,
+        CWInvalidCVV : "Invalid CVV",
+        CWInvalidName : "Invalid cardholder name"
+      ]
+```
+This messages are provided as default messages. This messages can be overridden by developers.
+
+In CardWalletSDKBuilder there is a function called setLiveCardValidationCustomErrors. This function takes an Integer - String map. You can override all error messages with this function. 
+
+#### Example Usage
+```swift
+let builder = CardWalletSDKBuilder()
+            .setEnvironment(environment: Environment.STAGING)
+            .setCredentialsProvider(provider: self)
+            .setLiveCardValidationCustomErrors(errors: [
+                CWError.CWInvalidCVV : "CVC Invalid Custom Message",
+                CWError.CWExpiredCard : "Expired Card Custom Message"
+                ])
+        CardWalletSDK.start(builder: builder)
+```
+It's not necessary to override all messages. Rest of the messages still remain with default messages.
+
 ## Version
-* 1.1
+* 1.2
