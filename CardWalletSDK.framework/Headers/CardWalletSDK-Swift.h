@@ -191,6 +191,20 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 SWIFT_CLASS("_TtC13CardWalletSDK7CWError")
 @interface CWError : NSObject <NSCopying>
 - (id _Nonnull)copyWithZone:(struct _NSZone * _Nullable)zone SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWSchemeNotSupported;)
++ (NSInteger)CWSchemeNotSupported SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidCardNumber;)
++ (NSInteger)CWInvalidCardNumber SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWExpireCard;)
++ (NSInteger)CWExpireCard SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidExpirationMonth;)
++ (NSInteger)CWInvalidExpirationMonth SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidExpiration;)
++ (NSInteger)CWInvalidExpiration SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidCVV;)
++ (NSInteger)CWInvalidCVV SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidName;)
++ (NSInteger)CWInvalidName SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger Unknown;)
 + (NSInteger)Unknown SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger Unauthorized;)
@@ -380,6 +394,7 @@ SWIFT_CLASS("_TtC13CardWalletSDK20CardWalletSDKBuilder")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 - (CardWalletSDKBuilder * _Nonnull)setEnvironmentWithEnvironment:(Environment * _Nonnull)environment SWIFT_WARN_UNUSED_RESULT;
 - (CardWalletSDKBuilder * _Nonnull)setCredentialsProviderWithProvider:(id <CardWalletCredentialsProvider> _Nonnull)provider SWIFT_WARN_UNUSED_RESULT;
+- (CardWalletSDKBuilder * _Nonnull)setLiveCardValidationCustomErrorsWithErrors:(NSDictionary<NSNumber *, NSString *> * _Nonnull)errors SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -423,15 +438,15 @@ SWIFT_CLASS("_TtC13CardWalletSDK13NewCreditCard")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIColor;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC13CardWalletSDK15SecureTextField")
 @interface SecureTextField : UITextField
-@property (nonatomic, strong) UIColor * _Null_unspecified errorColor;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
+
+
 
 
 
