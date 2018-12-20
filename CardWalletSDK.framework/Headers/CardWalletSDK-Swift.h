@@ -231,6 +231,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger Validation
 + (NSInteger)ValidationAmountProcessingError SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger IncorrectVerificationAmount;)
 + (NSInteger)IncorrectVerificationAmount SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CardExists;)
++ (NSInteger)CardExists SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic) NSInteger errorCode;
 @property (nonatomic, copy) NSString * _Nonnull errorDescription;
 @property (nonatomic, strong) NSError * _Nonnull cause;
