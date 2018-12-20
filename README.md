@@ -248,6 +248,8 @@ All functions related to this sdk returns CWError objects. This object has an er
     @objc public static let InvalidCVC = 10
     @objc public static let ValidationAmountProcessingError = 11
     @objc public static let IcorrectVerificationAmount = 12
+    @objc public static let CardExists = 13
+
 ```
 
 
@@ -309,4 +311,4 @@ let builder = CardWalletSDKBuilder()
 It's not necessary to override all messages. Rest of the messages still remain with default messages.
 
 ## Version
-* 1.2
+* 1.3
