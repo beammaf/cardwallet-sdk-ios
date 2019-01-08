@@ -311,4 +311,4 @@ let builder = CardWalletSDKBuilder()
 It's not necessary to override all messages. Rest of the messages still remain with default messages.
 
 ## Version
-* 1.3
+* 0.1.11
