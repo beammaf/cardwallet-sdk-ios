@@ -445,6 +445,7 @@ SWIFT_CLASS("_TtC13CardWalletSDK13NewCreditCard")
 SWIFT_CLASS("_TtC13CardWalletSDK15SecureTextField")
 @interface SecureTextField : UITextField
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
+- (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
