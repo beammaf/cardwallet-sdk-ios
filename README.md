@@ -88,15 +88,15 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - Parameter success: Returns the added card model
      - Parameter creditCard: Added card model
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: FSError object that includes error cause
+     - Parameter error: CWError object that includes error cause
      
-     - throws: `FSError`
-        - An error of type `FSError`
+     - throws: `CWError`
+        - An error of type `CWError`
      
      */
     @objc public func addCreditCard(hostController : UINavigationController,
                                     success : @escaping (_ creditCard: CreditCard?) -> (),
-                                    failure : @escaping (_ error: FSError?) -> ()){
+                                    failure : @escaping (_ error: CWError?) -> ()){
        
         
         manager.addCreditCard(hostController: hostController, success: success, failure: failure)
@@ -113,17 +113,17 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - Parameter success: Returns the added card model
      - Parameter creditCard: Added card model
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: FSError object that includes error cause
+     - Parameter error: CWError object that includes error cause
      
-     - throws: `FSError`
-        - An error of type `FSError`
+     - throws: `CWError`
+        - An error of type `CWError`
      
      */
     @objc public func addCreditCard(hostController : UINavigationController,
                                     nibName : String,
                                     bundle : Bundle,
                                     success : @escaping (_ creditCard: CreditCard?) -> (),
-                                    failure : @escaping (_ error: FSError?) -> ()){
+                                    failure : @escaping (_ error: CWError?) -> ()){
         manager.addCreditCard(hostController: hostController,nibName : nibName, bundle : bundle, success: success, failure: failure)
     }
     
@@ -135,28 +135,17 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - Parameter success: Returns the verified card model
      - Parameter creditCard: Verified card model
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: FSError object that includes error cause
+     - Parameter error: CWError object that includes error cause
      
-     - throws: `FSError`
-     - An error of type `FSError`
+     - throws: `CWError`
+     - An error of type `CWError`
      
      */
     @objc public func verifyCreditCard( creditCard : CreditCard,
                                         verifiedAmount : String,
                                         success : @escaping (_ creditCard: CreditCard?) -> (),
-                                        failure : @escaping (_ error: FSError?) -> ()) {
+                                        failure : @escaping (_ error: CWError?) -> ()) {
         manager.verifyCreditCard(amount: verifiedAmount, cardToken: creditCard.cardToken, success: success, failure: failure)
-    }
-    
-    @objc public func testLogin(username : String,pin : String,callback: @escaping (String) -> ()){
-        let testeBeamerService = TESTBeamerService()
-        let loginRequest = LoginRequest(email : username, pinCode : pin)
-        testeBeamerService.login(loginRequest: loginRequest).subscribe(onNext: { (response) in
-            callback((response.response?.dummyToken)!)
-
-        }, onError: { (error) in
-            
-        }, onCompleted: nil, onDisposed: nil).disposed(by: disposeBag)
     }
     
     /**
@@ -165,13 +154,13 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - Parameter success: Returns the added cards
      - Parameter creditCards: All cards that added before
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: FSError object that includes error cause
+     - Parameter error: CWError object that includes error cause
      
-     - throws: `FSError`
-     - An error of type `FSError`
+     - throws: `CWError`
+     - An error of type `CWError`
      
      */
-    @objc public func getCreditCards(success : @escaping (_ creditCards: [CreditCard]?) -> (),failure : @escaping (_ error: FSError?) -> ()) {
+    @objc public func getCreditCards(success : @escaping (_ creditCards: [CreditCard]?) -> (),failure : @escaping (_ error: CWError?) -> ()) {
         
         manager.getFundingSources(success: { (CreditCards) in
             
@@ -194,15 +183,15 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - Parameter cardId: Your card id that you want to remove
      - Parameter success: Called empty success closure if the card removed succesfully
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: FSError object that includes error cause
+     - Parameter error: CWError object that includes error cause
      
-     - throws: `FSError`
-     - An error of type `FSError`
+     - throws: `CWError`
+     - An error of type `CWError`
      
      */
-    @objc public func removeCard( cardId: String, success : @escaping () -> Void,failure : @escaping (_ error: FSError?) -> ()) {
+    @objc public func removeCard( cardToken: String, success : @escaping () -> Void,failure : @escaping (_ error: CWError?) -> ()) {
         
-        manager.removeFundingSource(cardToken: cardId, success: success, failure: failure)
+        manager.removeFundingSource(cardToken: cardToken, success: success, failure: failure)
     }
 ```
 ## Models
@@ -215,13 +204,23 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
 
     @objc public var cardToken = String!
     @objc public var cardNumber : String!
-    @objc public var status : String!
+    @objc public var status : CardStatus = .undefined
     @objc public var requiresVerification : Bool = false
     @objc public var canSendNewVerification : Bool = true
     @objc public var verificationAttemptsLeft : NSInteger = 3
 }
 
 ```
+
+#### Card status
+
+|  Enum   | Description              |
+| ------------ | ------------------------|
+|  undefined | Default initial state.|
+|  pending | Card is added, but waiting for verification.|
+|  available | Card is added and verified.|
+|  error | There was an error on either adding or verifying the card.|
+|  disabled | Card is deleted and won't be used.|
 
 ### CWError
 ```swift
@@ -311,4 +310,4 @@ let builder = CardWalletSDKBuilder()
 It's not necessary to override all messages. Rest of the messages still remain with default messages.
 
 ## Version
-* 0.1.11
+* 0.1.12
