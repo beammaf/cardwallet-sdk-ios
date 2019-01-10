@@ -180,7 +180,7 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
     /**
      Remove your creditCard for your card management
      
-     - Parameter cardId: Your card id that you want to remove
+     - Parameter creditCard: Your card that you want to remove
      - Parameter success: Called empty success closure if the card removed succesfully
      - Parameter failure: Returns the error object that includes error logic
      - Parameter error: CWError object that includes error cause
@@ -189,9 +189,9 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - An error of type `CWError`
      
      */
-    @objc public func removeCard( cardToken: String, success : @escaping () -> Void,failure : @escaping (_ error: CWError?) -> ()) {
+    @objc public func removeCard( creditCard: CreditCard, success : @escaping () -> Void,failure : @escaping (_ error: CWError?) -> ()) {
         
-        manager.removeFundingSource(cardToken: cardToken, success: success, failure: failure)
+        manager.removeFundingSource(card: creditCard, success: success, failure: failure)
     }
 ```
 ## Models
