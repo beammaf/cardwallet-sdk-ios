@@ -240,6 +240,14 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CardExists
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
+typedef SWIFT_ENUM(NSInteger, CardStatus, closed) {
+  CardStatusUndefined = 0,
+  CardStatusPending = 1,
+  CardStatusAvailable = 2,
+  CardStatusError = 3,
+  CardStatusDisabled = 4,
+};
+
 
 SWIFT_CLASS("_TtC13CardWalletSDK21CardWalletCredentials")
 @interface CardWalletCredentials : NSObject
@@ -291,14 +299,14 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 ///
 /// \param failure Returns the error object that includes error logic
 ///
-/// \param error FSError object that includes error cause
+/// \param error CWError object that includes error cause
 ///
 ///
 /// throws:
-/// <code>FSError</code>
+/// <code>CWError</code>
 /// <ul>
 ///   <li>
-///     An error of type <code>FSError</code>
+///     An error of type <code>CWError</code>
 ///   </li>
 /// </ul>
 - (void)addCreditCardWithHostController:(UINavigationController * _Nonnull)hostController success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
@@ -317,14 +325,14 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 ///
 /// \param failure Returns the error object that includes error logic
 ///
-/// \param error FSError object that includes error cause
+/// \param error CWError object that includes error cause
 ///
 ///
 /// throws:
-/// <code>FSError</code>
+/// <code>CWError</code>
 /// <ul>
 ///   <li>
-///     An error of type <code>FSError</code>
+///     An error of type <code>CWError</code>
 ///   </li>
 /// </ul>
 - (void)addCreditCardWithHostController:(UINavigationController * _Nonnull)hostController nibName:(NSString * _Nonnull)nibName bundle:(NSBundle * _Nonnull)bundle success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
@@ -333,7 +341,7 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 /// In your own controller that supply xib file, you should set your views our tag numbers for integration
 /// <ul>
 ///   <li>
-///     An error of type <code>FSError</code>
+///     An error of type <code>CWError</code>
 ///   </li>
 /// </ul>
 /// \param success Returns the verified card model
@@ -342,17 +350,16 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 ///
 /// \param failure Returns the error object that includes error logic
 ///
-/// \param error FSError object that includes error cause
+/// \param error CWError object that includes error cause
 ///
 ///
 /// throws:
-/// <code>FSError</code>
+/// <code>CWError</code>
 - (void)verifyCreditCardWithCreditCard:(CreditCard * _Nonnull)creditCard verifiedAmount:(NSString * _Nonnull)verifiedAmount success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
-- (void)testLoginWithUsername:(NSString * _Nonnull)username pin:(NSString * _Nonnull)pin callback:(void (^ _Nonnull)(NSString * _Nonnull))callback;
 /// Get your all funding sources
 /// <ul>
 ///   <li>
-///     An error of type <code>FSError</code>
+///     An error of type <code>CWError</code>
 ///   </li>
 /// </ul>
 /// \param success Returns the added cards
@@ -361,30 +368,30 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 ///
 /// \param failure Returns the error object that includes error logic
 ///
-/// \param error FSError object that includes error cause
+/// \param error CWError object that includes error cause
 ///
 ///
 /// throws:
-/// <code>FSError</code>
+/// <code>CWError</code>
 - (void)getCreditCardsWithSuccess:(void (^ _Nonnull)(NSArray<CreditCard *> * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
 /// Remove your creditCard for your card management
 /// <ul>
 ///   <li>
-///     An error of type <code>FSError</code>
+///     An error of type <code>CWError</code>
 ///   </li>
 /// </ul>
-/// \param cardId Your card id that you want to remove
+/// \param creditCard Your card that you want to remove
 ///
 /// \param success Called empty success closure if the card removed succesfully
 ///
 /// \param failure Returns the error object that includes error logic
 ///
-/// \param error FSError object that includes error cause
+/// \param error CWError object that includes error cause
 ///
 ///
 /// throws:
-/// <code>FSError</code>
-- (void)removeCardWithCardId:(NSString * _Nonnull)cardId success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
+/// <code>CWError</code>
+- (void)removeCardWithCreditCard:(CreditCard * _Nonnull)creditCard success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -404,7 +411,7 @@ SWIFT_CLASS("_TtC13CardWalletSDK10CreditCard")
 @interface CreditCard : NSObject
 @property (nonatomic, copy) NSString * _Null_unspecified cardToken;
 @property (nonatomic, copy) NSString * _Null_unspecified cardNumber;
-@property (nonatomic, copy) NSString * _Nullable status;
+@property (nonatomic) enum CardStatus status;
 @property (nonatomic) BOOL requiresVerification;
 @property (nonatomic) BOOL canSendNewVerification;
 @property (nonatomic) NSInteger verificationAttemptsLeft;
@@ -422,22 +429,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment 
 + (Environment * _Nonnull)PRODUCTION SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
-@end
-
-
-SWIFT_CLASS("_TtC13CardWalletSDK13NewCreditCard")
-@interface NewCreditCard : NSObject
-@property (nonatomic, copy) NSString * _Nonnull cardToken;
-@property (nonatomic, copy) NSString * _Null_unspecified cardNumber;
-@property (nonatomic, copy) NSString * _Null_unspecified cvv;
-@property (nonatomic, copy) NSString * _Null_unspecified expiry;
-@property (nonatomic, copy) NSString * _Null_unspecified nameSurname;
-@property (nonatomic) BOOL requiresVerification;
-- (NSInteger)getExpirationMonth SWIFT_WARN_UNUSED_RESULT;
-- (NSInteger)getExpiryYear SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getCardHolderLastName SWIFT_WARN_UNUSED_RESULT;
-- (NSString * _Nonnull)getCardholderFirstName SWIFT_WARN_UNUSED_RESULT;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 @class NSCoder;
