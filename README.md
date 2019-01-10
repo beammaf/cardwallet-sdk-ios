@@ -260,6 +260,8 @@ CardWallet SDK supports custom UI for AddCreditCard functionality.
 ### Add Credit Card Page
 You can pass custom xib file with addCreditCard function. Xib file must have some specific tags that you can use while you are adding your card. Tags are mandatory for xib usage.
 
+Scan card feature is optional. If you want to use scan card feature, just supply the tag to any button.
+
 |  View Type   | Descriptionn             |Tag   |
 | ------------ | ------------------------ |----- |
 |  UIImageView      | Credit Card Type Image      |100104 |
@@ -268,6 +270,8 @@ You can pass custom xib file with addCreditCard function. Xib file must have som
 |  SecureTextField | CVC Number                       |100102 |
 |  SecureTextField | Name Surname                   |100103 |
 |  UIButton            | Submit Button                     |100105 |
+|  UIButton (Optional) | Scan Button                    |100106 |
+
 
 ### Card Validation On Fly.
 CardWallet SDK validates cards on fly at Add Card Page. This feature is optional. In order to use this feature, related error labels must be specified on custom add card xib file. 
