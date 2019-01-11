@@ -74,11 +74,8 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      CardWalletSDK.start(builder: builder)
 
      */
-    @objc public static func start(builder : CardWalletSDKBuilder){
-        if(instance == nil){
-            instance = CardWalletSDK(builder: builder)
-        }
-    }
+    @objc public static func start(builder : CardWalletSDKBuilder)
+    
     
     
     /**
@@ -96,12 +93,8 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      */
     @objc public func addCreditCard(hostController : UINavigationController,
                                     success : @escaping (_ creditCard: CreditCard?) -> (),
-                                    failure : @escaping (_ error: CWError?) -> ()){
-       
-        
-        manager.addCreditCard(hostController: hostController, success: success, failure: failure)
-    }
-    
+                                    failure : @escaping (_ error: CWError?) -> ())
+                                    
     /**
      Add your creditCard for your with your own xib file
      
@@ -123,9 +116,8 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
                                     nibName : String,
                                     bundle : Bundle,
                                     success : @escaping (_ creditCard: CreditCard?) -> (),
-                                    failure : @escaping (_ error: CWError?) -> ()){
-        manager.addCreditCard(hostController: hostController,nibName : nibName, bundle : bundle, success: success, failure: failure)
-    }
+                                    failure : @escaping (_ error: CWError?) -> ())
+                                    
     
     /**
      After you added your creditCard, you should verify it for security purposes. Until that, you only will be able integrate up to a certan limit.
@@ -144,9 +136,8 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
     @objc public func verifyCreditCard( creditCard : CreditCard,
                                         verifiedAmount : String,
                                         success : @escaping (_ creditCard: CreditCard?) -> (),
-                                        failure : @escaping (_ error: CWError?) -> ()) {
-        manager.verifyCreditCard(amount: verifiedAmount, cardToken: creditCard.cardToken, success: success, failure: failure)
-    }
+                                        failure : @escaping (_ error: CWError?) -> ())
+    
     
     /**
      Get your all funding sources
@@ -160,22 +151,7 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - An error of type `CWError`
      
      */
-    @objc public func getCreditCards(success : @escaping (_ creditCards: [CreditCard]?) -> (),failure : @escaping (_ error: CWError?) -> ()) {
-        
-        manager.getFundingSources(success: { (CreditCards) in
-            
-            let creditCards = CreditCards?.map({ (fundingSource) -> CreditCard in
-                
-                let modelController = CreditCardModelController(fundingSource: fundingSource)
-                return modelController.creditCard
-            })
-            
-            success(creditCards)
-             
-        }) { (error) in
-            failure(error)
-        }
-    }
+    @objc public func getCreditCards(success : @escaping (_ creditCards: [CreditCard]?) -> (),failure : @escaping (_ error: CWError?) -> ())
 
     /**
      Remove your creditCard for your card management
@@ -189,10 +165,7 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - An error of type `CWError`
      
      */
-    @objc public func removeCard( creditCard: CreditCard, success : @escaping () -> Void,failure : @escaping (_ error: CWError?) -> ()) {
-        
-        manager.removeFundingSource(card: creditCard, success: success, failure: failure)
-    }
+    @objc public func removeCard( creditCard: CreditCard, success : @escaping () -> Void,failure : @escaping (_ error: CWError?) -> ())
 ```
 ## Models
 
