@@ -1,7 +1,7 @@
 
 #  CardWallet SDK - IOS Guide
 
-The CardWallet SDK is for interacting with the funding platform to add, update or remove card. It provides functionality to manage credit cards.
+The CardWallet SDK is for interacting with the funding platform to add, update or delete card. It provides functionality to manage credit cards.
 
 In order to use SDK framework you must be a registered developer with a provisioned token.
 
@@ -85,7 +85,7 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - Parameter success: Returns the added card model
      - Parameter creditCard: Added card model
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: CWError object that includes error cause
+     - Parameter error: CWError object
      
      - throws: `CWError`
         - An error of type `CWError`
@@ -106,7 +106,7 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - Parameter success: Returns the added card model
      - Parameter creditCard: Added card model
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: CWError object that includes error cause
+     - Parameter error: CWError object
      
      - throws: `CWError`
         - An error of type `CWError`
@@ -127,7 +127,7 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - Parameter success: Returns the verified card model
      - Parameter creditCard: Verified card model
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: CWError object that includes error cause
+     - Parameter error: CWError object
      
      - throws: `CWError`
      - An error of type `CWError`
@@ -145,7 +145,7 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
      - Parameter success: Returns the added cards
      - Parameter creditCards: All cards that added before
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: CWError object that includes error cause
+     - Parameter error: CWError object
      
      - throws: `CWError`
      - An error of type `CWError`
@@ -154,18 +154,18 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
     @objc public func getCreditCards(success : @escaping (_ creditCards: [CreditCard]?) -> (),failure : @escaping (_ error: CWError?) -> ())
 
     /**
-     Remove your creditCard for your card management
+    Delete your creditCard for your card management
      
-     - Parameter creditCard: Your card that you want to remove
-     - Parameter success: Called empty success closure if the card removed succesfully
+     - Parameter creditCard: Your card that you want to delete
+     - Parameter success: Called empty success closure if the card deleted succesfully
      - Parameter failure: Returns the error object that includes error logic
-     - Parameter error: CWError object that includes error cause
+     - Parameter error: CWError object
      
      - throws: `CWError`
      - An error of type `CWError`
      
      */
-    @objc public func removeCard( creditCard: CreditCard, success : @escaping () -> Void,failure : @escaping (_ error: CWError?) -> ())
+    @objc public func deleteCard( creditCard: CreditCard, success : @escaping () -> Void,failure : @escaping (_ error: CWError?) -> ())
 ```
 ## Models
 
@@ -199,7 +199,6 @@ func getCredentials(didCredentialsReceived: ((CardWalletCredentials) -> ())?) {
 ```swift
  var errorCode : Int = -1
  var errorDescription : String = ""
- @objc public var cause : NSError
 ```
 
 
@@ -287,4 +286,4 @@ let builder = CardWalletSDKBuilder()
 It's not necessary to override all messages. Rest of the messages still remain with default messages.
 
 ## Version
-* 0.1.12
+* 0.1.13
