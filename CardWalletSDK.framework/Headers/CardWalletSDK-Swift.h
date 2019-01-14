@@ -186,7 +186,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-@class NSError;
 
 SWIFT_CLASS("_TtC13CardWalletSDK7CWError")
 @interface CWError : NSObject <NSCopying>
@@ -235,7 +234,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CardExists
 + (NSInteger)CardExists SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic) NSInteger errorCode;
 @property (nonatomic, copy) NSString * _Nonnull errorDescription;
-@property (nonatomic, strong) NSError * _Nonnull cause;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -374,7 +372,7 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 /// throws:
 /// <code>CWError</code>
 - (void)getCreditCardsWithSuccess:(void (^ _Nonnull)(NSArray<CreditCard *> * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
-/// Remove your creditCard for your card management
+/// Delete your creditCard for your card management
 /// <ul>
 ///   <li>
 ///     An error of type <code>CWError</code>
@@ -391,7 +389,7 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 ///
 /// throws:
 /// <code>CWError</code>
-- (void)removeCardWithCreditCard:(CreditCard * _Nonnull)creditCard success:(void (^ _Nonnull)(void))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
+- (void)deleteCardWithCreditCard:(CreditCard * _Nonnull)creditCard success:(void (^ _Nonnull)(BOOL))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
