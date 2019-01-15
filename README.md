@@ -230,7 +230,7 @@ All functions related to this sdk returns CWError objects. This object has an er
 CardWallet SDK supports custom UI for AddCreditCard functionality.
 
 ### Add Credit Card Page
-You can pass custom xib file with addCreditCard function. Xib file must have some specific tags that you can use while you are adding your card. Tags are mandatory for xib usage.
+You can pass custom xib file with addCreditCard function. Xib file must have some specific tags that you can use while you are adding your card. Tags are mandatory for xib usage. The file owner of xib should be AddCardCustomController. The xib file should be configured as a ViewController. 
 
 Scan card feature is optional. If you want to use scan card feature, just supply the tag to any button.
 
