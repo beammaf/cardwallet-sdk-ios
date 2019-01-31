@@ -243,7 +243,6 @@ typedef SWIFT_ENUM(NSInteger, CardStatus, closed) {
   CardStatusPending = 1,
   CardStatusAvailable = 2,
   CardStatusError = 3,
-  CardStatusDisabled = 4,
 };
 
 
@@ -353,7 +352,7 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 ///
 /// throws:
 /// <code>CWError</code>
-- (void)verifyCreditCardWithCreditCard:(CreditCard * _Nonnull)creditCard verifiedAmount:(NSString * _Nonnull)verifiedAmount success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
+- (void)verifyCreditCardWithCardToken:(NSString * _Nonnull)cardToken verifiedAmount:(NSString * _Nonnull)verifiedAmount success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
 /// Get your all funding sources
 /// <ul>
 ///   <li>
@@ -389,7 +388,7 @@ SWIFT_CLASS("_TtC13CardWalletSDK13CardWalletSDK")
 ///
 /// throws:
 /// <code>CWError</code>
-- (void)deleteCardWithCreditCard:(CreditCard * _Nonnull)creditCard success:(void (^ _Nonnull)(BOOL))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
+- (void)deleteCardWithCardToken:(NSString * _Nonnull)cardToken success:(void (^ _Nonnull)(BOOL))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
@@ -405,15 +404,23 @@ SWIFT_CLASS("_TtC13CardWalletSDK20CardWalletSDKBuilder")
 @end
 
 
+SWIFT_CLASS("_TtC13CardWalletSDK18CardWalletSDKSetup")
+@interface CardWalletSDKSetup : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC13CardWalletSDK10CreditCard")
 @interface CreditCard : NSObject
-@property (nonatomic, copy) NSString * _Null_unspecified cardToken;
-@property (nonatomic, copy) NSString * _Null_unspecified cardNumber;
-@property (nonatomic) enum CardStatus status;
-@property (nonatomic) BOOL requiresVerification;
-@property (nonatomic) BOOL canSendNewVerification;
-@property (nonatomic) NSInteger verificationAttemptsLeft;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Null_unspecified cardToken;
+@property (nonatomic, readonly, copy) NSString * _Null_unspecified cardNumber;
+@property (nonatomic, readonly) enum CardStatus status;
+@property (nonatomic, readonly) BOOL requiresVerification;
+@property (nonatomic, readonly) BOOL canSendNewVerification;
+@property (nonatomic, readonly) NSInteger verificationAttemptsLeft;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
 
 
