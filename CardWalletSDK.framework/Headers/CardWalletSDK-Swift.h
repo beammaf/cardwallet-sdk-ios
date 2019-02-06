@@ -204,6 +204,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidC
 + (NSInteger)CWInvalidCVV SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidName;)
 + (NSInteger)CWInvalidName SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger NoInternetConnection;)
++ (NSInteger)NoInternetConnection SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger Unknown;)
 + (NSInteger)Unknown SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger Unauthorized;)
