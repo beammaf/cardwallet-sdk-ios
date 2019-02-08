@@ -1,0 +1,75 @@
+PODS:
+  - Alamofire (4.8.1)
+  - BeamCore (1.0.4):
+    - MBProgressHUD (~> 1.1.0)
+    - Moya/ReactiveSwift (~> 12.0)
+    - Moya/RxSwift (~> 12.0)
+    - RxBlocking
+    - RxCocoa
+    - Stripe
+    - SwiftyRSA
+  - CardWalletSDK (0.1.24):
+    - BeamCore
+  - MBProgressHUD (1.1.0)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
+  - Moya/ReactiveSwift (12.0.1):
+    - Moya/Core
+    - ReactiveSwift (~> 4.0)
+  - Moya/RxSwift (12.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - ReactiveSwift (4.0.0):
+    - Result (~> 4.0)
+  - Result (4.1.0)
+  - RxAtomic (4.4.0)
+  - RxBlocking (4.4.0):
+    - RxAtomic (~> 4.4)
+    - RxSwift (~> 4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - Stripe (14.0.0)
+  - SwiftyRSA (1.5.0):
+    - SwiftyRSA/ObjC (= 1.5.0)
+  - SwiftyRSA/ObjC (1.5.0)
+
+DEPENDENCIES:
+  - CardWalletSDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - BeamCore
+    - CardWalletSDK
+    - MBProgressHUD
+    - Moya
+    - ReactiveSwift
+    - Result
+    - RxAtomic
+    - RxBlocking
+    - RxCocoa
+    - RxSwift
+    - Stripe
+    - SwiftyRSA
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  BeamCore: 1a2516a6053e1831b84779170c8304e6ce718c40
+  CardWalletSDK: 7bcc700e4533c3bc2db381004cf0d3618e07d517
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxBlocking: 138ad53217434444d6eeeb4fb406a45431d92e31
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  Stripe: db29ad197c74aca6fb981e4e8355cf7ebd0fca5a
+  SwiftyRSA: 6e528fb1b1a87d5111c48081083b141d6d65f1cf
+
+PODFILE CHECKSUM: f3841d57e92ade37e7b97047824c9c234f9fd5c3
+
+COCOAPODS: 1.5.3

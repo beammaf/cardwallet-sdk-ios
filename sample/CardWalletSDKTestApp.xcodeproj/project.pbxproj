@@ -1,0 +1,749 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A7911BA8ED47FBF98799933 /* Pods_CardWalletSDKTestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FFB53E5FDFE1C9D540C91C8 /* Pods_CardWalletSDKTestAppTests.framework */; };
+		9F4A6CF921BE81E700E446E4 /* VerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A6CF821BE81E700E446E4 /* VerifyViewController.swift */; };
+		9F4DCD8F21C2864800BB1A0A /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DCD8E21C2864800BB1A0A /* HudManager.swift */; };
+		9F98D4662174BB7500C5C155 /* CustomAddCardController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F98D4652174BB7500C5C155 /* CustomAddCardController.xib */; };
+		9FC69CD5216DE90D0041CDE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC69CD4216DE90D0041CDE0 /* AppDelegate.swift */; };
+		9FC69CDA216DE90D0041CDE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC69CD8216DE90D0041CDE0 /* Main.storyboard */; };
+		9FC69CDC216DE90E0041CDE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FC69CDB216DE90E0041CDE0 /* Assets.xcassets */; };
+		9FC69CDF216DE90E0041CDE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC69CDD216DE90E0041CDE0 /* LaunchScreen.storyboard */; };
+		9FC69CEA216DE90E0041CDE0 /* CardWalletSDKAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC69CE9216DE90E0041CDE0 /* CardWalletSDKAppTests.swift */; };
+		9FEA11CD216F8392001AE139 /* ImportTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA11CC216F8392001AE139 /* ImportTesting.m */; };
+		9FEA11D1216F861B001AE139 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEA11D0216F861B001AE139 /* ViewController.m */; };
+		9FEB044F21D5008300B4E18C /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB044E21D5008300B4E18C /* TokenViewController.swift */; };
+		ADAF33150C4CB33A74F92F1F /* Pods_CardWalletSDKTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9F3DA9F8DD9AC3BA738AE5C /* Pods_CardWalletSDKTestApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FC69CE6216DE90E0041CDE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FC69CC9216DE90D0041CDE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FC69CD0216DE90D0041CDE0;
+			remoteInfo = FundingTestApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F0F322321BFC47900D0D97C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F4DCD9521C2BB3900BB1A0A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1DAB39B201363DFED4E5CFC8 /* Pods-CardWalletSDKTestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardWalletSDKTestAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardWalletSDKTestAppTests/Pods-CardWalletSDKTestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1FFB53E5FDFE1C9D540C91C8 /* Pods_CardWalletSDKTestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardWalletSDKTestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2658DCB8F72D81B9857AAB11 /* Pods-FundingTestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundingTestAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FundingTestAppTests/Pods-FundingTestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3057BF0BFCADB5A9B89B7920 /* Pods-FundingTestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundingTestAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FundingTestAppTests/Pods-FundingTestAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		31F887A61AEE472F085367AE /* Pods-CardWalletSDKTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardWalletSDKTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CardWalletSDKTestApp/Pods-CardWalletSDKTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5469BFEB32988B01AFEC1157 /* Pods-CardWalletSDKTestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardWalletSDKTestAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardWalletSDKTestAppTests/Pods-CardWalletSDKTestAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		67E4639D01C97C83EFF16133 /* Pods_CardWalletSDKTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardWalletSDKTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0F312821BFA94100D0D97C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = CardWalletSDK/Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		9F0F312921BFA94100D0D97C /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = CardWalletSDK/Carthage/Build/iOS/ReactiveMoya.framework; sourceTree = "<group>"; };
+		9F0F312A21BFA94100D0D97C /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = CardWalletSDK/Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		9F0F312B21BFA94100D0D97C /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = CardWalletSDK/Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		9F0F312C21BFA94100D0D97C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = CardWalletSDK/Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		9F0F312D21BFA94100D0D97C /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = CardWalletSDK/Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		9F0F312E21BFA94100D0D97C /* SwiftyRSA.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyRSA.framework; path = CardWalletSDK/Carthage/Build/iOS/SwiftyRSA.framework; sourceTree = "<group>"; };
+		9F0F312F21BFA94100D0D97C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = CardWalletSDK/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		9F0F313021BFA94100D0D97C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = CardWalletSDK/Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		9F0F313121BFA94100D0D97C /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = CardWalletSDK/Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		9F0F313221BFA94100D0D97C /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = CardWalletSDK/Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		9F0F313321BFA94100D0D97C /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stripe.framework; path = CardWalletSDK/Carthage/Build/iOS/Stripe.framework; sourceTree = "<group>"; };
+		9F0F313421BFA94100D0D97C /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = CardWalletSDK/Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
+		9F0F31E121BFC32F00D0D97C /* Stripe.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Stripe.framework; path = Carthage/Build/iOS/Stripe.framework; sourceTree = "<group>"; };
+		9F0F31E321BFC32F00D0D97C /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		9F0F31E521BFC32F00D0D97C /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
+		9F0F31E821BFC32F00D0D97C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		9F0F31EA21BFC32F00D0D97C /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		9F0F31EB21BFC32F00D0D97C /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		9F3C12F02170C11900CF88EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9F41A270217626A7009A5E76 /* FundingTestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FundingTestApp.entitlements; sourceTree = "<group>"; };
+		9F41A28321762C9F009A5E76 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9F4A6CF821BE81E700E446E4 /* VerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyViewController.swift; sourceTree = "<group>"; };
+		9F4DCD8E21C2864800BB1A0A /* HudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
+		9F98D4652174BB7500C5C155 /* CustomAddCardController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAddCardController.xib; sourceTree = "<group>"; };
+		9FC69CD1216DE90D0041CDE0 /* CardWalletSDKTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardWalletSDKTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC69CD4216DE90D0041CDE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FC69CD9216DE90D0041CDE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FC69CDB216DE90E0041CDE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FC69CDE216DE90E0041CDE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FC69CE0216DE90E0041CDE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FC69CE5216DE90E0041CDE0 /* CardWalletSDKTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CardWalletSDKTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FC69CE9216DE90E0041CDE0 /* CardWalletSDKAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWalletSDKAppTests.swift; sourceTree = "<group>"; };
+		9FC69CEB216DE90E0041CDE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FEA11CB216F8392001AE139 /* ImportTesting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImportTesting.h; sourceTree = "<group>"; };
+		9FEA11CC216F8392001AE139 /* ImportTesting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImportTesting.m; sourceTree = "<group>"; };
+		9FEA11CF216F861B001AE139 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9FEA11D0216F861B001AE139 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9FEA123A21708C0E001AE139 /* CardWalletSDKTestApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CardWalletSDKTestApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		9FEB044E21D5008300B4E18C /* TokenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
+		B6604E5471FE7BA22823F3B3 /* Pods-FundingTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundingTestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FundingTestApp/Pods-FundingTestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B9F3DA9F8DD9AC3BA738AE5C /* Pods_CardWalletSDKTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CardWalletSDKTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D881C3E1934F19A938E53CB0 /* Pods-FundingTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundingTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-FundingTestApp/Pods-FundingTestApp.release.xcconfig"; sourceTree = "<group>"; };
+		F44E4E248CC3897B9F90FB15 /* Pods-CardWalletSDKTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CardWalletSDKTestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-CardWalletSDKTestApp/Pods-CardWalletSDKTestApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FC69CCE216DE90D0041CDE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADAF33150C4CB33A74F92F1F /* Pods_CardWalletSDKTestApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC69CE2216DE90E0041CDE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A7911BA8ED47FBF98799933 /* Pods_CardWalletSDKTestAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D86D8C9C0A6DAA35D517122 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F0F312F21BFA94100D0D97C /* Alamofire.framework */,
+				9F0F31E821BFC32F00D0D97C /* Alamofire.framework */,
+				9F0F312D21BFA94100D0D97C /* MBProgressHUD.framework */,
+				9F0F313121BFA94100D0D97C /* Moya.framework */,
+				9F0F312921BFA94100D0D97C /* ReactiveMoya.framework */,
+				9F0F312A21BFA94100D0D97C /* ReactiveSwift.framework */,
+				9F0F313021BFA94100D0D97C /* Result.framework */,
+				9F0F313421BFA94100D0D97C /* RxAtomic.framework */,
+				9F0F313221BFA94100D0D97C /* RxBlocking.framework */,
+				9F0F31E521BFC32F00D0D97C /* RxAtomic.framework */,
+				9F0F31EA21BFC32F00D0D97C /* RxBlocking.framework */,
+				9F0F312821BFA94100D0D97C /* RxCocoa.framework */,
+				9F0F312B21BFA94100D0D97C /* RxMoya.framework */,
+				9F0F312C21BFA94100D0D97C /* RxSwift.framework */,
+				9F0F31E321BFC32F00D0D97C /* RxCocoa.framework */,
+				9F0F31EB21BFC32F00D0D97C /* RxSwift.framework */,
+				9F0F313321BFA94100D0D97C /* Stripe.framework */,
+				9F0F31E121BFC32F00D0D97C /* Stripe.framework */,
+				9F0F312E21BFA94100D0D97C /* SwiftyRSA.framework */,
+				9F41A28321762C9F009A5E76 /* XCTest.framework */,
+				9F3C12F02170C11900CF88EC /* Foundation.framework */,
+				B9F3DA9F8DD9AC3BA738AE5C /* Pods_CardWalletSDKTestApp.framework */,
+				67E4639D01C97C83EFF16133 /* Pods_CardWalletSDKTestApp.framework */,
+				1FFB53E5FDFE1C9D540C91C8 /* Pods_CardWalletSDKTestAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9FC69CC8216DE90D0041CDE0 = {
+			isa = PBXGroup;
+			children = (
+				9FC69CD3216DE90D0041CDE0 /* CardWalletSDKTestApp */,
+				9FC69CE8216DE90E0041CDE0 /* CardWalletSDKTestAppTests */,
+				9FC69CD2216DE90D0041CDE0 /* Products */,
+				D13671223B8F8CCFC046B694 /* Pods */,
+				9D86D8C9C0A6DAA35D517122 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9FC69CD2216DE90D0041CDE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FC69CD1216DE90D0041CDE0 /* CardWalletSDKTestApp.app */,
+				9FC69CE5216DE90E0041CDE0 /* CardWalletSDKTestAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FC69CD3216DE90D0041CDE0 /* CardWalletSDKTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				9FEB044E21D5008300B4E18C /* TokenViewController.swift */,
+				9F41A270217626A7009A5E76 /* FundingTestApp.entitlements */,
+				9FC69CD4216DE90D0041CDE0 /* AppDelegate.swift */,
+				9FC69CD8216DE90D0041CDE0 /* Main.storyboard */,
+				9FC69CDB216DE90E0041CDE0 /* Assets.xcassets */,
+				9FC69CDD216DE90E0041CDE0 /* LaunchScreen.storyboard */,
+				9FC69CE0216DE90E0041CDE0 /* Info.plist */,
+				9FEA11CB216F8392001AE139 /* ImportTesting.h */,
+				9FEA11CC216F8392001AE139 /* ImportTesting.m */,
+				9FEA11CF216F861B001AE139 /* ViewController.h */,
+				9FEA11D0216F861B001AE139 /* ViewController.m */,
+				9FEA123A21708C0E001AE139 /* CardWalletSDKTestApp-Bridging-Header.h */,
+				9F98D4652174BB7500C5C155 /* CustomAddCardController.xib */,
+				9F4A6CF821BE81E700E446E4 /* VerifyViewController.swift */,
+				9F4DCD8E21C2864800BB1A0A /* HudManager.swift */,
+			);
+			path = CardWalletSDKTestApp;
+			sourceTree = "<group>";
+		};
+		9FC69CE8216DE90E0041CDE0 /* CardWalletSDKTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FC69CE9216DE90E0041CDE0 /* CardWalletSDKAppTests.swift */,
+				9FC69CEB216DE90E0041CDE0 /* Info.plist */,
+			);
+			name = CardWalletSDKTestAppTests;
+			path = FundingTestAppTests;
+			sourceTree = "<group>";
+		};
+		D13671223B8F8CCFC046B694 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6604E5471FE7BA22823F3B3 /* Pods-FundingTestApp.debug.xcconfig */,
+				D881C3E1934F19A938E53CB0 /* Pods-FundingTestApp.release.xcconfig */,
+				2658DCB8F72D81B9857AAB11 /* Pods-FundingTestAppTests.debug.xcconfig */,
+				3057BF0BFCADB5A9B89B7920 /* Pods-FundingTestAppTests.release.xcconfig */,
+				31F887A61AEE472F085367AE /* Pods-CardWalletSDKTestApp.debug.xcconfig */,
+				F44E4E248CC3897B9F90FB15 /* Pods-CardWalletSDKTestApp.release.xcconfig */,
+				1DAB39B201363DFED4E5CFC8 /* Pods-CardWalletSDKTestAppTests.debug.xcconfig */,
+				5469BFEB32988B01AFEC1157 /* Pods-CardWalletSDKTestAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FC69CD0216DE90D0041CDE0 /* CardWalletSDKTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FC69CEE216DE90E0041CDE0 /* Build configuration list for PBXNativeTarget "CardWalletSDKTestApp" */;
+			buildPhases = (
+				411E0D0FDAEBA076CFCA123A /* [CP] Check Pods Manifest.lock */,
+				9F4DCD9121C2BA8D00BB1A0A /* ShellScript */,
+				9FC69CCD216DE90D0041CDE0 /* Sources */,
+				9FC69CCE216DE90D0041CDE0 /* Frameworks */,
+				9FC69CCF216DE90D0041CDE0 /* Resources */,
+				9F0F322321BFC47900D0D97C /* CopyFiles */,
+				9F4DCD9521C2BB3900BB1A0A /* Embed Frameworks */,
+				32D09DDA0A527F3D438E643B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardWalletSDKTestApp;
+			productName = FundingTestApp;
+			productReference = 9FC69CD1216DE90D0041CDE0 /* CardWalletSDKTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FC69CE4216DE90E0041CDE0 /* CardWalletSDKTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FC69CF1216DE90E0041CDE0 /* Build configuration list for PBXNativeTarget "CardWalletSDKTestAppTests" */;
+			buildPhases = (
+				81890420C6741B90096E9927 /* [CP] Check Pods Manifest.lock */,
+				9FC69CE1216DE90E0041CDE0 /* Sources */,
+				9FC69CE2216DE90E0041CDE0 /* Frameworks */,
+				9FC69CE3216DE90E0041CDE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FC69CE7216DE90E0041CDE0 /* PBXTargetDependency */,
+			);
+			name = CardWalletSDKTestAppTests;
+			productName = FundingTestAppTests;
+			productReference = 9FC69CE5216DE90E0041CDE0 /* CardWalletSDKTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FC69CC9216DE90D0041CDE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Kagan Ozupek";
+				TargetAttributes = {
+					9FC69CD0216DE90D0041CDE0 = {
+						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
+					};
+					9FC69CE4216DE90E0041CDE0 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 9FC69CCC216DE90D0041CDE0 /* Build configuration list for PBXProject "CardWalletSDKTestApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FC69CC8216DE90D0041CDE0;
+			productRefGroup = 9FC69CD2216DE90D0041CDE0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FC69CD0216DE90D0041CDE0 /* CardWalletSDKTestApp */,
+				9FC69CE4216DE90E0041CDE0 /* CardWalletSDKTestAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FC69CCF216DE90D0041CDE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC69CDF216DE90E0041CDE0 /* LaunchScreen.storyboard in Resources */,
+				9FC69CDC216DE90E0041CDE0 /* Assets.xcassets in Resources */,
+				9F98D4662174BB7500C5C155 /* CustomAddCardController.xib in Resources */,
+				9FC69CDA216DE90D0041CDE0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC69CE3216DE90E0041CDE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32D09DDA0A527F3D438E643B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CardWalletSDKTestApp/Pods-CardWalletSDKTestApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${PODS_ROOT}/BeamCore/Alamofire.framework",
+				"${PODS_ROOT}/BeamCore/Moya.framework",
+				"${PODS_ROOT}/BeamCore/ReactiveMoya.framework",
+				"${PODS_ROOT}/BeamCore/Result.framework",
+				"${PODS_ROOT}/BeamCore/RxAtomic.framework",
+				"${PODS_ROOT}/BeamCore/RxCocoa.framework",
+				"${PODS_ROOT}/BeamCore/RxMoya.framework",
+				"${PODS_ROOT}/BeamCore/RxSwift.framework",
+				"${PODS_ROOT}/BeamCore/ReactiveSwift.framework",
+				"${PODS_ROOT}/BeamCore/CardIO.framework",
+				"${PODS_ROOT}/BeamCore/RxCoreLocation.framework",
+				"${PODS_ROOT}/CardWalletSDK/CardWalletSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveMoya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxMoya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoreLocation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CardWalletSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stripe.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyRSA.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CardWalletSDKTestApp/Pods-CardWalletSDKTestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		411E0D0FDAEBA076CFCA123A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardWalletSDKTestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81890420C6741B90096E9927 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CardWalletSDKTestAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F4DCD9121C2BA8D00BB1A0A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FC69CCD216DE90D0041CDE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FEB044F21D5008300B4E18C /* TokenViewController.swift in Sources */,
+				9FEA11D1216F861B001AE139 /* ViewController.m in Sources */,
+				9F4A6CF921BE81E700E446E4 /* VerifyViewController.swift in Sources */,
+				9FC69CD5216DE90D0041CDE0 /* AppDelegate.swift in Sources */,
+				9FEA11CD216F8392001AE139 /* ImportTesting.m in Sources */,
+				9F4DCD8F21C2864800BB1A0A /* HudManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC69CE1216DE90E0041CDE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FC69CEA216DE90E0041CDE0 /* CardWalletSDKAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FC69CE7216DE90E0041CDE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FC69CD0216DE90D0041CDE0 /* CardWalletSDKTestApp */;
+			targetProxy = 9FC69CE6216DE90E0041CDE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FC69CD8216DE90D0041CDE0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FC69CD9216DE90D0041CDE0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FC69CDD216DE90E0041CDE0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FC69CDE216DE90E0041CDE0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FC69CEC216DE90E0041CDE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9FC69CED216DE90E0041CDE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FC69CEF216DE90E0041CDE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31F887A61AEE472F085367AE /* Pods-CardWalletSDKTestApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F7TP2NB38;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CardWalletSDK/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/CardWalletSDK/output",
+				);
+				INFOPLIST_FILE = CardWalletSDKTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.beamuae.CardWalletSDKTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CardWalletSDKTestApp/CardWalletSDKTestApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9FC69CF0216DE90E0041CDE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F44E4E248CC3897B9F90FB15 /* Pods-CardWalletSDKTestApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F7TP2NB38;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CardWalletSDK/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/CardWalletSDK/output",
+				);
+				INFOPLIST_FILE = CardWalletSDKTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.beamuae.CardWalletSDKTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "CardWalletSDKTestApp/CardWalletSDKTestApp-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9FC69CF2216DE90E0041CDE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DAB39B201363DFED4E5CFC8 /* Pods-CardWalletSDKTestAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F7TP2NB38;
+				INFOPLIST_FILE = CardWalletSDKTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.beamuae.FundingTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FC69CF3216DE90E0041CDE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5469BFEB32988B01AFEC1157 /* Pods-CardWalletSDKTestAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6F7TP2NB38;
+				INFOPLIST_FILE = CardWalletSDKTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.beamuae.FundingTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FC69CCC216DE90D0041CDE0 /* Build configuration list for PBXProject "CardWalletSDKTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC69CEC216DE90E0041CDE0 /* Debug */,
+				9FC69CED216DE90E0041CDE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FC69CEE216DE90E0041CDE0 /* Build configuration list for PBXNativeTarget "CardWalletSDKTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC69CEF216DE90E0041CDE0 /* Debug */,
+				9FC69CF0216DE90E0041CDE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FC69CF1216DE90E0041CDE0 /* Build configuration list for PBXNativeTarget "CardWalletSDKTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FC69CF2216DE90E0041CDE0 /* Debug */,
+				9FC69CF3216DE90E0041CDE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FC69CC9216DE90D0041CDE0 /* Project object */;
+}
