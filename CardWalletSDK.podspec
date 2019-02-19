@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
     s.dependency        'Stripe', '~>  14.0.0'
     s.dependency        'MBProgressHUD', '~> 1.1.0'
     s.dependency        'SwiftyRSA', '~> 1.5.0'
-    s.dependency        'CardIO', '~> 5.4.1'
 
     s.author            = { 'Name' => 'developer@beamuae.app' }
     s.license           = { :type => 'MIT', :file => 'LICENSE' }
