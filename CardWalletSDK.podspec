@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
     s.source            = { :git => 'https://github.com/beammaf/cardwallet-sdk-ios.git',:branch => 'refactorDependencies'}
 
     s.ios.deployment_target = '11.0'
-    s.ios.vendored_frameworks = 'CardWalletSDK.framework'
+    s.ios.vendored_frameworks = 'CardWalletSDK.framework', 'CardIO.framework'
     s.requires_arc = true
 end
