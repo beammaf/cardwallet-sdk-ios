@@ -2,8 +2,8 @@
 //  CardWalletSDK.h
 //  CardWalletSDK
 //
-//  Created by Kagan Ozupek on 19.02.2019.
-//  Copyright © 2019 VNGRS. All rights reserved.
+//  Created by BEAM TEAM on 19.02.2019.
+//  Copyright © 2019 BEAM. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
