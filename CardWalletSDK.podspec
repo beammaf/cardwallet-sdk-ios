@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
     s.license           = { :type => 'MIT', :file => 'LICENSE' }
 
     s.platform          = :ios
-    s.source            = { :git => 'https://github.com/beammaf/cardwallet-sdk-ios.git',:branch => 'master'}
+    s.source            = { :git => 'https://github.com/beammaf/cardwallet-sdk-ios.git',:branch => 'refactorDependencies'}
 
     s.ios.deployment_target = '11.0'
     s.ios.vendored_frameworks = 'CardWalletSDK.framework', 'CardIO.framework'
