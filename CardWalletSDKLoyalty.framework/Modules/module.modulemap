@@ -1,0 +1,4 @@
+framework module CardWalletSDKLoyalty {
+  header "CardWalletSDKLoyalty-Swift.h"
+  requires objc
+}
