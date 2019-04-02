@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'CardWalletSDKLoyalty'
-    s.version           = '0.2.1'
+    s.version           = '0.2.2'
     s.summary           = 'Card Management SDK Provided by Beam UAE'
     s.homepage          = 'http://beamuae.app/'
     s.dependency        'Moya/RxSwift', '~> 12.0'
