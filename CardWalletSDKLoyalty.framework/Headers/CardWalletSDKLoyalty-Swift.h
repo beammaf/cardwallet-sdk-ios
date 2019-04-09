@@ -165,8 +165,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import CoreGraphics;
 @import Foundation;
-@import MaterialComponents;
 @import ObjectiveC;
+@import SkyFloatingLabelTextField;
 @import UIKit;
 #endif
 
@@ -205,6 +205,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidC
 + (NSInteger)CWInvalidCVV SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidName;)
 + (NSInteger)CWInvalidName SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger CWInvalidAmount;)
++ (NSInteger)CWInvalidAmount SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger cameraPermisionDeny;)
 + (NSInteger)cameraPermisionDeny SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) NSInteger NoInternetConnection;)
@@ -268,7 +270,7 @@ SWIFT_PROTOCOL("_TtP20CardWalletSDKLoyalty29CardWalletCredentialsProvider_")
 @end
 
 @class CardWalletSDKBuilder;
-@class UINavigationController;
+@class UIViewController;
 @class CreditCard;
 
 SWIFT_CLASS("_TtC20CardWalletSDKLoyalty13CardWalletSDK")
@@ -311,33 +313,7 @@ SWIFT_CLASS("_TtC20CardWalletSDKLoyalty13CardWalletSDK")
 ///     An error of type <code>CWError</code>
 ///   </li>
 /// </ul>
-- (void)addCreditCardWithHostController:(UINavigationController * _Nonnull)hostController success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
-/// Add your creditCard for your with your own xib file
-/// precondition:
-/// In your own controller that supply xib file, you should set your views our tag numbers for integration
-/// \param hostController Your initial navigationController that want open to use your add card controller
-///
-/// \param nibName Your custom xib name
-///
-/// \param bundle Your bundle that where your xib file includes
-///
-/// \param success Returns the added card model
-///
-/// \param creditCard Added card model
-///
-/// \param failure Returns the error object that includes error logic
-///
-/// \param error CWError object that includes error cause
-///
-///
-/// throws:
-/// <code>CWError</code>
-/// <ul>
-///   <li>
-///     An error of type <code>CWError</code>
-///   </li>
-/// </ul>
-- (void)addCreditCardWithHostController:(UINavigationController * _Nullable)hostController nibName:(NSString * _Nonnull)nibName bundle:(NSBundle * _Nonnull)bundle success:(void (^ _Nonnull)(CreditCard * _Nullable, UINavigationController * _Nonnull))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
+- (void)addCreditCardWithHostController:(UIViewController * _Nonnull)hostController success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
 /// After you added your creditCard, you should verify it for security purposes. Until that, you only will be able integrate up to a certan limit.
 /// precondition:
 /// In your own controller that supply xib file, you should set your views our tag numbers for integration
@@ -444,7 +420,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment 
 @class NSCoder;
 
 SWIFT_CLASS("_TtC20CardWalletSDKLoyalty15SecureTextField")
-@interface SecureTextField : MDCTextField
+@interface SecureTextField : SkyFloatingLabelTextField
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder SWIFT_UNAVAILABLE;
 - (BOOL)canPerformAction:(SEL _Nonnull)action withSender:(id _Nullable)sender SWIFT_WARN_UNUSED_RESULT;
