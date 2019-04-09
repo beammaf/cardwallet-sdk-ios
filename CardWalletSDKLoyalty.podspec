@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
     s.name              = 'CardWalletSDKLoyalty'
-    s.version           = '0.2.4'
+    s.version           = '0.2.5'
     s.summary           = 'Card Management SDK Provided by Beam UAE'
     s.homepage          = 'http://beamuae.app/'
     s.dependency        'Moya/RxSwift', '~> 12.0'
     s.dependency        'Stripe', '~>  14.0.0'
     s.dependency        'MBProgressHUD', '~> 1.1.0'
     s.dependency        'SwiftyRSA', '~> 1.5.0'
-    s.dependency        'MaterialComponents/TextFields'
-    s.dependency        'MaterialComponents/TextFields+ColorThemer'
+    s.dependency        'SkyFloatingLabelTextField', '~> 3.0'
+
     s.author            = { 'Name' => 'developer@beamuae.app' }
     s.license           = { :type => 'MIT', :file => 'LICENSE' }
 
