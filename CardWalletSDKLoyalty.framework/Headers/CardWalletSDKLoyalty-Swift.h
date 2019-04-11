@@ -313,7 +313,7 @@ SWIFT_CLASS("_TtC20CardWalletSDKLoyalty13CardWalletSDK")
 ///     An error of type <code>CWError</code>
 ///   </li>
 /// </ul>
-- (void)addCreditCardWithHostController:(UIViewController * _Nonnull)hostController success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
+- (void)addCreditCardWithHostController:(UIViewController * _Nonnull)hostController success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure showLoading:(void (^ _Nonnull)(void))showLoading hideLoading:(void (^ _Nonnull)(void))hideLoading;
 /// After you added your creditCard, you should verify it for security purposes. Until that, you only will be able integrate up to a certan limit.
 /// precondition:
 /// In your own controller that supply xib file, you should set your views our tag numbers for integration
