@@ -334,6 +334,7 @@ SWIFT_CLASS("_TtC20CardWalletSDKLoyalty13CardWalletSDK")
 /// throws:
 /// <code>CWError</code>
 - (void)verifyCreditCardWithCardToken:(NSString * _Nonnull)cardToken verifiedAmount:(NSString * _Nonnull)verifiedAmount success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure;
+- (void)verifyCreditCardWithHostController:(UIViewController * _Nonnull)hostController card:(CreditCard * _Nonnull)card success:(void (^ _Nonnull)(CreditCard * _Nullable))success failure:(void (^ _Nonnull)(CWError * _Nullable))failure showLoading:(void (^ _Nonnull)(void))showLoading hideLoading:(void (^ _Nonnull)(void))hideLoading;
 /// Get your all funding sources
 /// <ul>
 ///   <li>
@@ -407,8 +408,8 @@ SWIFT_CLASS("_TtC20CardWalletSDKLoyalty10CreditCard")
 
 SWIFT_CLASS("_TtC20CardWalletSDKLoyalty11Environment")
 @interface Environment : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment * _Nonnull DEV;)
-+ (Environment * _Nonnull)DEV SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment * _Nonnull UAT;)
++ (Environment * _Nonnull)UAT SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment * _Nonnull STAGING;)
 + (Environment * _Nonnull)STAGING SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment * _Nonnull PRODUCTION;)
