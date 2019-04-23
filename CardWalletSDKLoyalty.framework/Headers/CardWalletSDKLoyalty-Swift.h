@@ -408,6 +408,8 @@ SWIFT_CLASS("_TtC20CardWalletSDKLoyalty10CreditCard")
 
 SWIFT_CLASS("_TtC20CardWalletSDKLoyalty11Environment")
 @interface Environment : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment * _Nonnull SANDBOX;)
++ (Environment * _Nonnull)SANDBOX SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment * _Nonnull UAT;)
 + (Environment * _Nonnull)UAT SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment * _Nonnull STAGING;)
