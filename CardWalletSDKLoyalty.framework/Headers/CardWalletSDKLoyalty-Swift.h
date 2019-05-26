@@ -416,6 +416,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment 
 + (Environment * _Nonnull)STAGING SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment * _Nonnull PRODUCTION;)
 + (Environment * _Nonnull)PRODUCTION SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) Environment * _Nonnull LT;)
++ (Environment * _Nonnull)LT SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_DEPRECATED_MSG("-init is unavailable");
 @end
