@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
     s.version           = '1.0.4'
     s.summary           = 'Card Management SDK Provided by Beam UAE'
     s.homepage          = 'http://beamuae.app/'
-    s.dependency        'Moya/RxSwift', '~> 14.0.0-alpha.1'
+    s.dependency        'Moya/RxSwift', '14.0.0-alpha.1'
     s.dependency        'Stripe', '~>  14.0.0'
     s.dependency        'MBProgressHUD', '~> 1.1.0'
     s.dependency        'SwiftyRSA', '~> 1.5.0'
