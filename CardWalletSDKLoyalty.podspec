@@ -6,7 +6,6 @@ Pod::Spec.new do |s|
     s.dependency        'Moya/RxSwift', '14.0.0'
     s.dependency        'Stripe', '~>  14.0.0'
     s.dependency        'MBProgressHUD', '~> 1.1.0'
-    s.dependency        'SwiftyRSA', '~> 1.5.0'
     s.dependency        'SkyFloatingLabelTextField', '~> 3.0'
 
     s.author            = { 'Name' => 'developer@beamuae.app' }
